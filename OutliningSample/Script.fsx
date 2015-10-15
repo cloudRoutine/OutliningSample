@@ -174,7 +174,15 @@ module TypeDefns =
         }   
 
 module Cexpr =
-    let ss num =
+    type cexprBuilder ()=
+        member inline __.Zero x = x
+        member inline __.Bind x f = f x
+        member inline __.Return x = x
+        member inline __.ReturnFrom x = x
+        member inline __.Yield x = x
+        member inline __.YieldFrom x = x
+
+    let yields num =
             seq{ 
 
                 yield! 
@@ -193,14 +201,6 @@ module Cexpr =
                 
                 
              }
-
-    type cexprBuilder ()=
-        member inline __.Zero x = x
-        member inline __.Bind x f = f x
-        member inline __.Return x = x
-        member inline __.ReturnFrom x = x
-        member inline __.Yield x = x
-        member inline __.YieldFrom x = x
 
     let cexpr = cexprBuilder()
 
