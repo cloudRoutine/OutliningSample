@@ -7,16 +7,13 @@
        "File2.fs"       
        "File3.fs"
 
-
-
-
 open System
 open System.Collections
 open System.Collections.Generic
 
 
 let rec recfunc a = 
-    ()
+    () 
     ()
 
 and andfunc a =
@@ -31,7 +28,7 @@ let outerfunc a =
     and inner_andfunc a =
         ()
         ()
-    ()
+    () 
 
 type rectype() =
     member __.nada = ()
@@ -43,16 +40,20 @@ and andtype2() =
     member __.nada = ()
 
 
-[   "item"
+[ 
     "item"
-    "item"  ] |> ignore
+    "item"
+    "item"  
+] 
+    |> ignore
 
 [|  "item"
     "item"
 
-    "item"  |] |> ignore
+    "item"  |] 
+    |> ignore
 
-let list_and_array = 
+let list_and_array =
  
     [   "item"
         "item"
@@ -71,8 +72,11 @@ module ``Who Cares?`` =
     ()
 
 
-seq {
-        10  ..   1000
+seq{        
+
+    10  ..   1000
+
+
     } |> ignore
 
 if true
@@ -83,25 +87,31 @@ if true
         (
         )
         ()
-        (
-    
-    
-        )
-        ()
 
+        seq{        
+
+            10  ..   1000
+
+
+        } |> ignore
+
+        let x =
+            ()
+            ()
+            ()
+        ()
 elif 
     true 
  && true 
  || true
     then
-        ()  
+        ()   
         ()
         ()
 
 else 
-    ()
-    ()
-    ()
+    
+     ()
 
 type thenConstructor() =
     
@@ -135,13 +145,20 @@ type thenConstructor() =
 
 type System.String with
 
+    member __.more_nothing1 =
+        ()
+        "nada" |> ignore 
+
     static member DOES_NOTHING = 
         ()
         ()
         "seriously nothing" |> ignore
 
+    member __.more_nothing2_____ =
+        ()
+        "nada" |> ignore
 
-
+   
 
 
 let matchfunction =
@@ -158,39 +175,79 @@ let matchfunction =
 let matchwith num =
 
     match num with
-    | 0 -> ()
+    | 0 -> 
+            ()
+            ()
+            ()
     | 1 -> ()
-    | 2 -> ()
-    | 3 -> ()
+    | 2 -> () 
+    | 3 ->  ()
+            ()
+            ()
+            ()
     | 4 -> ()
     | 5 -> ()
     | _ -> ()
+
+fun x -> 
+    ()
+    ()
+    ()   
 
 
 ( fun x -> 
     ()
     ()
     ()  ) |> List.iter <| []
+
     
 
 [ for x in 0 .. 100 -> 
     ()
     ()
-    x   ]
+    x  ]
 
+[   "item"
+    "item"
+    "item"  ] |> ignore
+
+for x in 0 .. 100 do
+    ()
+    ()
 
 for x = 100 downto 10 do
     ()
     ()
     () |> ignore
+
+[|  "item"
+    "item"
+
+    "item"  |] |> ignore
    
+let func _ =
+    for 
+        x in 0 .. 100 do
+        ()
+        ()
+
+    for 
+        x=100 
+            downto 10 
+                do
+        ()
+        ()
+        () |> ignore
+
+    
+
 
 // comblock
 // comblock
 // comblock
 
 /// docblock
-/// docblock
+/// docblock 
 /// docblock
 /// docblock
 
@@ -203,8 +260,7 @@ for x = 100 downto 10 do
 [<AbstractClass>]
 type abclass() =
 
-    abstract abmember : unit 
-            -> unit
+    abstract abmember : unit-> unit
             -> unit
             -> unit
             -> unit
@@ -231,8 +287,19 @@ let somef x =
                         ()
                         () 
 
+let func x = 
+    (   )
+    ()
+    ()
 
+let itest =
 
+    { new IDisposable with
+        member __.Dispose() = ()
+            
+    
+    
+    }                        
 
 
 
